@@ -1,7 +1,7 @@
 function previewFile() {
     const file = document.querySelector('input[type=file]').files[0];
     const allowedExtensions = ['.png', '.jpeg', '.jpg', '.bmp'];
-    const fileExtension = file.name.split('.').pop();
+    const fileExtension = file.name.split('.').pop().toLowerCase();
 
     if (!allowedExtensions.includes(`.${fileExtension}`)) {
         alert('Supported formats: bmp, jpg, jpeg, png only');
